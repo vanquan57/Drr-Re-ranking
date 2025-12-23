@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  drr:
+    build: .
+    container_name: drr_model
+    volumes:
+      # Mount toàn bộ code - sửa gì cũng không cần rebuild!
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: tail -f /dev/null  # Keep container running
+    stdin_open: true
+    tty: true
+

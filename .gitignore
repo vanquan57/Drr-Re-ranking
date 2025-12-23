@@ -1,0 +1,4 @@
+venv/
+log/
+models/
+dataset/rec_test_set.sample.txt.predict.out
